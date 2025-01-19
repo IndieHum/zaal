@@ -130,8 +130,18 @@ button {
   display: flex;
   gap: 10px;
 }
+
 /* === Footer Styles === */
 footer {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
+}
+
+footer a {
+  color: var(--color-dark);
+  transition: all 0.25s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--color-brand);
 }
