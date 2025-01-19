@@ -32,33 +32,43 @@
     </section>
   </header>
   <main>
-    <section class="section-top">
+    <section>
       <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
-      <p>توضیحات</p>
+      <p>با زال یک بار جست و جو کنید و چندین بار نتایج را مشاهده کنید.</p>
     </section>
     <section>
+      <form onsubmit="event.preventDefault();" role="search" class="search-form">
+        <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input"/>
+        <button type="submit">برو</button>    
+      </form>
+    </section>
+    <section class="section-lower">
       <div>
-        <input type="text" class="search-input" placeholder="بنویس..." />
-        <button>=></button>
+        <input type="checkbox" id="google">
+        <label for="google">گوگل</label>
       </div>
-    </section>
-    <section>
-      <input type="checkbox" id="google">
-      <label for="google">گوگل</label>
-
-      <input type="checkbox" id="ddg">
-      <label for="ddg">داک‌داک‌گو</label>
-
-      <input type="checkbox"  id="bing">
-      <label for="bing">بینگ</label>
-
-      <input type="checkbox"  id="wiki">
-      <label for="wiki">ویکی‌پدیا</label>
+      <div>
+        <input type="checkbox" id="ddg">
+        <label for="ddg">داک‌داک‌گو</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bing">
+        <label for="bing">بینگ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="wiki">
+        <label for="wiki">ویکی‌پدیا</label>
+      </div>
     </section>
   </main>
   <footer>
-    <span>صاحب اثر</span>
+      <span>ساخته شده توسط <a href="https://github.com/IndieHum" target="_blank">معین‌فریدونی</a></span>
   </footer>
 </body>
 
 </html>
+
+<!--
+https://codepen.io/jkantner/pen/eYmvvqQ?editors=1100
+https://codepen.io/liamj/pen/vYYLGZj
+-->

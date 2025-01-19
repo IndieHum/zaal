@@ -1,24 +1,46 @@
 /* === Global Styles === */
-*, *::before, *::after {
-    font-family: 'vazir-medium', Arial, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    text-align: right;
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
 
-h1 { font-family: 'vazir-bold', Arial, sans-serif; }
+*,
+*::before,
+*::after {
+  font-family: 'vazir-medium', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
 
-label { user-select: none; }
+h1 {
+  font-family: 'vazir-bold', Arial, sans-serif;
+}
+
+label {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 /* === Document Styles === */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  /* background: var(--color-dark); */
+  height: 100vh;
 }
 
 /* === Header Styles === */
@@ -32,11 +54,12 @@ header {
 
 /* header section { border: 1px solid red; } */
 
-header select, header option {
+header select,
+header option {
   padding: 5px;
 }
 
-header fieldset{
+header fieldset {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -48,19 +71,67 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 25px;
 }
 
+
+.search-form {
+  position: relative;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+}
+
+.search-input,
+button {
+  height: 3.5rem;
+  color: var(--color-dark);
+}
+
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  border: 1px solid #ccc;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+  font-size: 16px;
+}
+
+button {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--btn-width);
+  font-size: larger;
+  font-family: 'vazir-bold';
+  background: var(--color-brand);
+  border-radius: var(--rad) 0 0 var(--rad);
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+
+  +button {
+    display: block;
+  }
+}
+
+.section-lower {
+  display: flex;
+  gap: 10px;
+}
 /* === Footer Styles === */
 footer {
   position: absolute;
   bottom: 0px;
-}
-
-/* === Search Input === */
-.search-input {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
