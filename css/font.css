@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'vazir-bold';
+  src: url(../fonts/Vazirmatn-Bold.woff2);
+}
+
+@font-face {
+  font-family: 'vazir-light';
+  src: url(../fonts/Vazirmatn-Light.woff2);
+}
+
+@font-face {
+  font-family: 'vazir-medium';
+  src: url(../fonts/Vazirmatn-Medium.woff2);
+}
+
+@font-face {
+  font-family: 'vazir-regular';
+  src: url(../fonts/Vazirmatn-Regular.woff2);
+}
+
+@font-face {
+  font-family: 'vazir-semiBold';
+  src: url(../fonts/Vazirmatn-SemiBold.woff2);
+}

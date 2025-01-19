@@ -1,0 +1,32 @@
+/* === global stuff === */
+
+*, *::before, *::after {
+  font-family:'vazir-medium', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: center;
+}
+
+/* === Tag and hyper text styles === */
+
+h1 { font-family: 'vazir-bold', Arial, sans-serif;}
+
+/* === document styles === */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align:right;
+}
