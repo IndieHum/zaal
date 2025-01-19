@@ -10,17 +10,32 @@
 <body>
   <header>
     <section>
-      <!--lang panel will be here as well-->
-    </section>
-    <section class="section-middle">
-      <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
-      <p>توضیحات</p>
+        <select id="">
+          <option value="fa">فارسی</option>
+          <option value="en">English</option>
+        </select>
     </section>
     <section>
-      <!--opening setting will be here-->
+        <fieldset>
+          <legend>نمایش نتایج جست‌وجو</legend>
+
+          <section>
+            <input type="radio" id="nwindow" name="solution">
+            <label for="nwindow">باز کردن پنجره</label>  
+          </section>
+  
+          <section>
+            <input type="radio" id="ntab" name="solution" checked>
+            <label for="ntab">باز کردن برگه</label>
+          </section>
+        </fieldset>
     </section>
   </header>
   <main>
+    <section class="section-top">
+      <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
+      <p>توضیحات</p>
+    </section>
     <section>
       <div>
         <input type="text" class="search-input" placeholder="بنویس..." />
@@ -28,16 +43,16 @@
       </div>
     </section>
     <section>
-      <input type="checkbox" name="google" id="">
+      <input type="checkbox" id="google">
       <label for="google">گوگل</label>
 
-      <input type="checkbox" name="ddg" id="">
+      <input type="checkbox" id="ddg">
       <label for="ddg">داک‌داک‌گو</label>
 
-      <input type="checkbox" name="bing" id="">
+      <input type="checkbox"  id="bing">
       <label for="bing">بینگ</label>
 
-      <input type="checkbox" name="wiki" id="">
+      <input type="checkbox"  id="wiki">
       <label for="wiki">ویکی‌پدیا</label>
     </section>
   </main>
