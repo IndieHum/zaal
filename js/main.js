@@ -1,11 +1,12 @@
 const SearchBtn = document.getElementById("search-btn");
-const SearchValue = document.getElementById("search").value;
+// const SearchValue = document.getElementById("search").value;
 const SEnodes = document.querySelectorAll("input[type='checkbox']");
 
 let SEchecked = [];
 
 const searchFunc = () => {
     // check for SE
+    const SearchValue = document.getElementById("search").value;
     console.log(SearchValue)
     console.log(SEnodes)
     
@@ -20,16 +21,20 @@ const searchFunc = () => {
     SEchecked.forEach(n => {
         switch (n.id) {
             case 'google':
-                // https://www.google.com/search?q={SearchValue}
+                // https://www.google.com/search?q=${SearchValue}
+                window.open(`https://www.google.com/search?q=${SearchValue}`)
                 break;
             case 'ddg':
-                // https://duckduckgo.com/{SeachValue}
+                // https://duckduckgo.com/${SearchValue}
+                window.open(`https://duckduckgo.com/${SearchValue}`)
                 break;
             case 'bing':
-                // https://www.bing.com/search?q={SearchValue}
+                // https://www.bing.com/search?q=${SearchValue}
+                window.open(`https://www.bing.com/search?q=${SearchValue}`)
                 break;
             case 'wiki':
-                // https://en.wikipedia.org/wiki/{SearchValue}
+                // https://en.wikipedia.org/wiki/${SearchValue}
+                window.open(`https://en.wikipedia.org/wiki/${SearchValue}`)
                 break;
         }
     });
