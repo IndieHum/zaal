@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html dir="rtl">
+<html dir="ltr">
 
 <head>
-  <title>زال</title>
+  <title>Zaal</title>
   <link rel="stylesheet" href="./css/main-style.css">
   <link rel="stylesheet" href="./css/font.css">
-  <link rel="shortcut icon" href="./images/ico_2.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../../images/ico_2.png" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <section class="left-section">
-      <select id="lang-toggle">
-        <option value="fa">فارسی</option>
+      <select id="">
         <option value="en">English</option>
+        <option value="fa">فارسی</option>
       </select>
-      <img src="./images/icons8-language-50.png" alt="language">
+      <img src="../../images/icons8-language-50.png" alt="language">
     </section>
     <section>
       <fieldset>
-        <legend>نمایش نتایج جست‌وجو</legend>
+        <legend>Showing Search Result</legend>
 
         <section>
           <input type="radio" id="nwindow" name="solution">
-          <label for="nwindow">باز کردن پنجره</label>
+          <label for="nwindow">Opening new window</label>
         </section>
 
         <section>
           <input type="radio" id="ntab" name="solution">
-          <label for="ntab">باز کردن برگه</label>
+          <label for="ntab">Opening new tab</label>
         </section>
       </fieldset>
     </section>
   </header>
   <main>
     <section>
-      <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
-      <p>با زال یک بار جست و جو کنید و چندین بار نتایج را مشاهده کنید.</p>
+      <h1>ZAAL | a shortcut between search engines</h1>
+      <p>With Zaal, you can search once and see results several times in different search engines</p>
     </section>
     <section>
       <form onsubmit="event.preventDefault();" role="search" class="search-form">
-        <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input" />
-        <button type="submit" id="search-btn">برو</button>
+        <input id="search" type="search" placeholder="Search..." autofocus required class="search-input" />
+        <button type="submit" id="search-btn">Go</button>
       </form>
     </section>
     <section class="section-lower">
       <div>
         <input type="checkbox" id="google">
-        <label for="google">گوگل</label>
+        <label for="google">GOOGLE</label>
       </div>
       <div>
         <input type="checkbox" id="ddg">
-        <label for="ddg">داک‌داک‌گو</label>
+        <label for="ddg">DuckDuckGo</label>
       </div>
       <div>
         <input type="checkbox" id="bing">
-        <label for="bing">بینگ</label>
+        <label for="bing">bing</label>
       </div>
       <div>
         <input type="checkbox" id="wiki">
-        <label for="wiki">ویکی‌پدیا</label>
+        <label for="wiki">Wikipedia</label>
       </div>
     </section>
   </main>
   <footer>
-    <span><a href="https://github.com/IndieHum" target="_blank">گیت‌هاب</a> سازنده</span>
+    <span><a href="https://github.com/IndieHum" target="_blank">GitHub</a> of maker.</span>
   </footer>
   <script src="./js/main.js" type="module"></script>
   </body>
