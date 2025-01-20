@@ -52,11 +52,19 @@ header {
   /* border: 1px solid red; */
 }
 
-/* header section { border: 1px solid red; } */
-
 header select,
 header option {
   padding: 5px;
+}
+
+.left-section{
+  display: flex;
+  align-items:start;
+  gap: 5px;
+}
+
+.left-section img {
+  width: 35px;
 }
 
 header fieldset {
