@@ -1,5 +1,4 @@
 const SearchBtn = document.getElementById("search-btn");
-// const SearchValue = document.getElementById("search").value;
 const SEnodes = document.querySelectorAll("input[type='checkbox']");
 
 let SEchecked = [];
@@ -7,6 +6,7 @@ let SEchecked = [];
 const searchFunc = () => {
     // check for SE
     const SearchValue = document.getElementById("search").value;
+
     console.log(SearchValue)
     console.log(SEnodes)
     
