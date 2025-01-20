@@ -1,9 +1,11 @@
 import { Searching } from "./search.js";
+import { PageChange } from "./lang.js";
 
 const SearchBtn = document.getElementById("search-btn");
 const SEnodes = document.querySelectorAll("input[type='checkbox']");
 const NewWinRadio = document.getElementById("nwindow");
 const NewTabRadio = document.getElementById("ntab");
+const LangToggle = document.getElementById("lang-toggle")
 
 let SEchecked = [];
 // when it is true: new tab - false: new window
@@ -32,6 +34,7 @@ const searchFunc = () => {
 
 function mainFunc() {
     NewTabRadio.checked = true;
+    LangToggle.addEventListener("change", PageChange);
     SearchBtn.addEventListener("click", searchFunc);
 }
 
