@@ -1,14 +1,22 @@
+import { Searching } from "./search.js";
+
 const SearchBtn = document.getElementById("search-btn");
 const SEnodes = document.querySelectorAll("input[type='checkbox']");
+const NewWinRadio = document.getElementById("nwindow");
+const NewTabRadio = document.getElementById("ntab");
 
 let SEchecked = [];
+// when it is true: new tab - false: new window
+let ShowStatus = true;
 
 const searchFunc = () => {
-    // check for SE
     const SearchValue = document.getElementById("search").value;
+    ShowStatus = NewTabRadio.checked == true ? true : false;
 
+    // temp logs
     console.log(SearchValue)
     console.log(SEnodes)
+    console.log(NewWinRadio,NewTabRadio)
     
     SEchecked = [];
     SEnodes.forEach(n => {
@@ -16,31 +24,14 @@ const searchFunc = () => {
     });
     if (SEchecked.length == 0) alert("موتور جست‌وجویی انتخاب نشده است.");
     
+    // temp logs
     console.log(SEchecked);
     
-    SEchecked.forEach(n => {
-        switch (n.id) {
-            case 'google':
-                // https://www.google.com/search?q=${SearchValue}
-                window.open(`https://www.google.com/search?q=${SearchValue}`)
-                break;
-            case 'ddg':
-                // https://duckduckgo.com/${SearchValue}
-                window.open(`https://duckduckgo.com/${SearchValue}`)
-                break;
-            case 'bing':
-                // https://www.bing.com/search?q=${SearchValue}
-                window.open(`https://www.bing.com/search?q=${SearchValue}`)
-                break;
-            case 'wiki':
-                // https://en.wikipedia.org/wiki/${SearchValue}
-                window.open(`https://en.wikipedia.org/wiki/${SearchValue}`)
-                break;
-        }
-    });
+    Searching(SEchecked, SearchValue, ShowStatus);
 }
 
 function mainFunc() {
+    NewTabRadio.checked = true;
     SearchBtn.addEventListener("click", searchFunc);
 }
 
