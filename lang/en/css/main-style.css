@@ -133,6 +133,12 @@ button {
 
 .section-lower {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-lower > section {
+  display: flex;
   gap: 10px;
 }
 

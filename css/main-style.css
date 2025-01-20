@@ -37,7 +37,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  /* background: var(--color-dark); */
   height: 100vh;
 }
 
@@ -47,7 +46,6 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
 
 header select,
@@ -79,7 +77,6 @@ main {
   flex-direction: column;
   gap: 25px;
 }
-
 
 .search-form {
   position: relative;
@@ -133,6 +130,12 @@ button {
 }
 
 .section-lower {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-lower > section {
   display: flex;
   gap: 10px;
 }

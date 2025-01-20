@@ -4,7 +4,13 @@ export function Searching (SEchecked, SearchValue, ShowStatus) {
     const google = "https://www.google.com/search?q=";
     const ddg = "https://duckduckgo.com/";
     const bing = "https://www.bing.com/search?q=";
-    const wiki = "https://en.wikipedia.org/wiki/";
+    const wiki = "https://en.wikipedia.org/wiki/Special:Search?search=";
+    const yandex = "https://yandex.com/search/?text=";
+    const yahoo = "https://search.yahoo.com/search?p=";
+    const zbin = "https://zarebin.ir/search?q=";
+    const brave = "https://search.brave.com/search?q=";
+    const ask = "https://www.ask.com/web?q=";
+    const webc = "https://www.webcrawler.com/serp?q=";
     
     const searchTemple = (SE) => {
         if (ShowStatus) window.open(`${SE}${SearchValue}`);
@@ -27,6 +33,24 @@ export function Searching (SEchecked, SearchValue, ShowStatus) {
                 break;
             case 'wiki':
                 searchTemple(wiki);
+                break;
+            case 'yandex':
+                searchTemple(yandex);
+                break;
+            case 'yahoo':
+                searchTemple(yahoo);
+                break;
+            case 'zbin':
+                searchTemple(zbin);
+                break;
+            case 'brave':
+                searchTemple(brave);
+                break;
+            case 'ask':
+                searchTemple(ask);
+                break;
+            case 'webc':
+                searchTemple(webc);
                 break;
         }
     });
