@@ -7,8 +7,8 @@
 > .زال در حال حاضر یک نسخه بتا است و بخش هایی از آن هنوز کار نمی کند
 
 # Zaal /zɑːl/
-Zaal is a shortcut between search engines. With Zaal, you can search once and see results several times in different search engines. 
-The overall goal of Zaal is to become a useful tool in OSINT.
+Zaal is a shortcut to search engines. With Zal, you search once and see different results in different search engines. 
+Zaal's ultimate goal is to become an efficient tool in OSINT.
 
 > [!CAUTION]
 > Zaal still is a BETA version and some features may not work very well.
