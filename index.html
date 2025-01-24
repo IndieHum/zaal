@@ -1,103 +1,130 @@
 <!DOCTYPE html>
-<html dir="rtl">
-
+<html dir="rtl" lang="fa">
 <head>
-  <title>زال</title>
-  <link rel="stylesheet" href="./css/main-style.css">
-  <link rel="stylesheet" href="./css/font.css">
-  <link rel="shortcut icon" href="./images/ico_2.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="shortcut icon" href="assets/images/logo/ico_2.png" type="image/x-icon">
+    <title>زال</title>
 </head>
-
 <body>
-  <header>
-    <section class="left-section">
-      <select id="lang-toggle">
-        <option value="fa">فارسی</option>
-        <option value="en">English</option>
-      </select>
-      <img src="./images/icons8-language-50.png" alt="language">
-    </section>
-    <section>
-      <fieldset>
-        <legend>نمایش نتایج جست‌وجو</legend>
+    <header>
+        <section class="left-section">
+          <select id="lang-toggle">
+            <option value="fa">فارسی</option>
+            <option value="en">English</option>
+          </select>
+          <img src="assets/images/icon/icons8-language-50.png" alt="language">
+        </section>
+        <section>
+          <fieldset>
+            <legend>نمایش نتایج جست‌وجو</legend>
 
-        <section>
-          <input type="radio" id="nwindow" name="solution">
-          <label for="nwindow">باز کردن پنجره</label>
-        </section>
+            <section>
+              <input type="radio" id="nwindow" name="solution">
+              <label for="nwindow">باز کردن پنجره</label>
+            </section>
 
-        <section>
-          <input type="radio" id="ntab" name="solution">
-          <label for="ntab">باز کردن برگه</label>
+            <section>
+              <input type="radio" id="ntab" name="solution">
+              <label for="ntab">باز کردن برگه</label>
+            </section>
+          </fieldset>
         </section>
-      </fieldset>
-    </section>
-  </header>
-  <main>
-    <section>
-      <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
-      <p>با زال یک بار جست و جو کنید و چندین بار نتایج را مشاهده کنید.</p>
-    </section>
-    <section>
-      <form onsubmit="event.preventDefault();" role="search" class="search-form">
-        <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input" />
-        <button type="submit" id="search-btn">برو</button>
-      </form>
-    </section>
-    <section class="section-lower">
+    </header>
+    <main>
         <section>
-          <div>
-            <input type="checkbox" id="google">
-            <label for="google">گوگل</label>
-          </div>
-          <div>
-            <input type="checkbox" id="ddg">
-            <label for="ddg">داک‌داک‌گو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="bing">
-            <label for="bing">بینگ</label>
-          </div>
-          <div>
-            <input type="checkbox" id="wiki">
-            <label for="wiki">ویکی‌پدیا</label>
-          </div>
-          <div>
-            <input type="checkbox" id="yandex">
-            <label for="yandex">یَندِکس</label>
-          </div>
-          <div>
-            <input type="checkbox" id="yahoo">
-            <label for="yahoo">یاهو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="zbin">
-            <label for="zbin">ذره‌بین</label>
-          </div>
+            <h1><span class="title"> زال </span> |‌ میان‌بر موتورهای جست‌وجو</h1>
+            <p>با زال یک بار جست و جو و چندین نتیجه را مشاهده کنید.</p>
         </section>
         <section>
-          <div>
-            <input type="checkbox" id="brave">
-            <label for="brave">بِرِیو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="ask">
-            <label for="ask">اَسک</label>
-          </div>
-          <div>
-            <input type="checkbox" id="webc">
-            <label for="webc">خزنده‌وب</label>
-          </div>
+            <form onsubmit="event.preventDefault();" role="search" class="search-form">
+                <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input" />
+                <button type="submit" id="search-btn">برو</button>
+            </form>
         </section>
-    </section>
-  </main>
-  <footer>
-    <span><a href="https://github.com/IndieHum" target="_blank">گیت‌هاب</a> سازنده</span>
-  </footer>
-  <script src="./js/main.js" type="module"></script>
-  </body>
-
+        <section class="section-lower">
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/google.png" alt="google"/>
+                <div>
+                    <input type="checkbox" id="google">
+                    <label for="google">گوگل</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/duckduckgo.png" alt="duckduckgo"/>
+                <div>
+                    <input type="checkbox" id="ddg">
+                    <label for="ddg">داک‌داک‌گو</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/bing.png" alt="bing"/>
+                <div>
+                    <input type="checkbox" id="bing">
+                    <label for="bing">بینگ</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/wikipedia.png" alt="wikipedia"/>
+                <div>
+                    <input type="checkbox" id="wiki">
+                    <label for="wiki">ویکی‌پدیا</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/yandex.png" alt="yandex"/>
+                <div>
+                    <input type="checkbox" id="yandex">
+                    <label for="yandex">یَندِکس</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/yahoo.png" alt="yahoo"/>
+                <div>
+                    <input type="checkbox" id="yahoo">
+                    <label for="yahoo">یاهو</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/magnifying.png" alt="magnifying"/>
+                <div>
+                    <input type="checkbox" id="zbin">
+                    <label for="zbin">ذره‌بین</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/brave.png" alt="brave"/>
+                <div>
+                    <input type="checkbox" id="brave">
+                    <label for="brave">بِرِیو</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/ask.png" alt="ask"/>
+                <div>
+                    <input type="checkbox" id="ask">
+                    <label for="ask">اَسک</label>
+                </div>
+            </div>
+            <div class="box-item">
+                <img height="48" width="48" src="assets/images/logoItems/bot.png" alt="bot"/>
+                <div>
+                    <input type="checkbox" id="webc">
+                    <label for="webc">خزنده‌وب</label>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/IndieHum" target="_blank"> گیت‌هاب سازنده </a>
+    </footer>
+    <script src="./js/main.js" type="module"></script>
+</body>
 </html>
+
+
 
 <!--
 https://codepen.io/jkantner/pen/eYmvvqQ?editors=1100
