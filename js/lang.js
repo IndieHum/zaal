@@ -1,13 +1,15 @@
 export function PageChange(event) {
-    const SelectedLanguage = event.target.value;
-    switch (SelectedLanguage) {
-        case "fa":
-            window.location.assign("../index.html");
-            break;
-        case "en":
-            window.location.assign("./lang/en/index-en.html");
-            break;
-        default:
-            return;
-    }
+  const SelectedLanguage = event.target.value;
+  switch (SelectedLanguage) {
+    case "fa":
+      if (window.location.href.includes("index-en.html"))
+        window.location.assign("../../index.html")
+      else window.location.reload();
+      break;
+    case "en":
+      if (window.location.href.includes("index.html"))
+        window.location.assign("../lang/en/index-en.html")
+      else window.location.reload();
+      break;
+  }
 }
