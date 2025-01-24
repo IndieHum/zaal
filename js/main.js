@@ -38,8 +38,10 @@ const searchFunc = () => {
 }
 
 function mainFunc() {
+  console.log(event)
   NewTabRadio.checked = true;
   LangToggle.addEventListener("change", PageChange);
+  if (event.key === "Enter") searchFunc();
   SearchBtn.addEventListener("click", searchFunc);
 }
 
