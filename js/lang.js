@@ -7,7 +7,7 @@ export function PageChange(event) {
       else window.location.reload();
       break;
     case "en":
-      if (window.location.href.includes("index.html"))
+      if (!window.location.href.includes("index-en.html"))
         window.location.assign("../lang/en/index-en.html")
       else window.location.reload();
       break;
