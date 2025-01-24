@@ -4,7 +4,7 @@
   --dur: .3s;
   --color-dark: #2f2f2f;
   --color-light: #fff;
-  --color-brand: #57bd84;
+  --color-brand: #f8953e;
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
@@ -33,11 +33,12 @@ a {
 
 /* === Document Styles === */
 body {
+  height: 100svh;
+  background-color: #fcf2ea;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  height: 100vh;
+  gap: 35px;
 }
 
 /* === Header Styles === */
@@ -47,7 +48,12 @@ header {
   display: flex;
   justify-content: space-between;
 }
-
+input[type="radio"] {
+  outline: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #ad5e0f;
+}
 header select,
 header option {
   padding: 5px;
@@ -71,7 +77,7 @@ header fieldset {
 
 /* === Main Section === */
 main {
-  margin-top: 120px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -103,6 +109,14 @@ input[type="search"] {
   z-index: 1;
   position: relative;
   font-size: 16px;
+  caret-color: #fa962d;
+}
+
+input[type="checkbox"] {
+  outline: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #fa962d;
 }
 
 button {
@@ -130,8 +144,8 @@ button {
 }
 
 .section-lower {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   gap: 10px;
 }
 
@@ -142,8 +156,8 @@ button {
 
 /* === Footer Styles === */
 footer {
-  position: absolute;
-  bottom: 10px;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 footer a {
@@ -153,4 +167,26 @@ footer a {
 
 footer a:hover {
   color: var(--color-brand);
+}
+
+.title {
+  color: #fa962d
+}
+.box-item {
+  border: #f5bb90 2px solid;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+.box-item div {
+  display: flex;
+  margin-top: 9px;
+  flex-direction: row;
+  align-items: center;
+}
+.box-item label {
+  margin-right: 6px;
 }
