@@ -1,2 +1,8 @@
 include:
-  - /lang/en/
+  - /lang/en/  # Include the English directory
+
+defaults:
+  - scope:
+      path: "lang/en"  # Apply settings to English files
+    values:
+      permalink: /en/:title  # Serve English pages under `/en/`
