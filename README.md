@@ -1,4 +1,4 @@
-![Zaal logo](https://github.com/IndieHum/zaal/blob/master/images/logo_for_zaal_1.png)
+![Zaal logo](./images/logo_for_zaal_1.png)
 
 # زال
 زال یک میان‌بر برای موتورهای جست‌وجو است. با زال شما یک بار جست و جو می کنید و نتایج مختلف را در موتورهای جست و جوی مختلف مشاهده می کنید
