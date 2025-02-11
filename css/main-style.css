@@ -16,7 +16,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-align: right;
 }
 
 h1 {
@@ -31,52 +30,7 @@ a {
   text-decoration: none;
 }
 
-/* === Document Styles === */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  height: 100vh;
-}
-
-/* === Header Styles === */
-header {
-  padding: 25px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-header select,
-header option {
-  padding: 5px;
-}
-
-.left-section{
-  display: flex;
-  align-items:start;
-  gap: 5px;
-}
-
-.left-section img {
-  width: 35px;
-}
-
-header fieldset {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-/* === Main Section === */
-main {
-  margin-top: 120px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 25px;
-}
+/* Searchbar */
 
 .search-form {
   position: relative;
@@ -105,7 +59,7 @@ input[type="search"] {
   font-size: 16px;
 }
 
-button {
+main button {
   display: none;
   position: absolute;
   top: 0;
@@ -127,30 +81,4 @@ button {
   +button {
     display: block;
   }
-}
-
-.section-lower {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.section-lower > section {
-  display: flex;
-  gap: 10px;
-}
-
-/* === Footer Styles === */
-footer {
-  position: absolute;
-  bottom: 10px;
-}
-
-footer a {
-  color: var(--color-dark);
-  transition: all 0.25s ease-in-out;
-}
-
-footer a:hover {
-  color: var(--color-brand);
 }

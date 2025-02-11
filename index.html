@@ -1,107 +1,97 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="fa">
+<!doctype html>
+<html lang="fa" dir="rtl">
 
 <head>
-  <title>زال</title>    
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>زال</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="./images/ico_2.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/main-style.css">
   <link rel="stylesheet" href="./css/font.css">
-  <link rel="shortcut icon" href="./images/ico_2.png" type="image/x-icon">
+  <!-- bootstrap css cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-evstqn3/azprg1anm3qdgpjlim9nao0yz1ztcqtwfspd3yd65vohhpuucomlasjc" crossorigin="anonymous">
 </head>
 
-<body>
-  <header>
-    <section class="left-section">
-      <select id="lang-toggle">
-        <option value="fa">فارسی</option>
-        <option value="en">English</option>
-      </select>
-      <img src="./images/icons8-language-50.png" alt="language">
-    </section>
+<body class="bg-dark text-white">
+  <header class="d-flex justify-content-between align-items-center p-3 bg-secondary">
+
     <section>
-      <fieldset>
-        <legend>نمایش نتایج جست‌وجو</legend>
-
-        <section>
-          <input type="radio" id="nwindow" name="solution">
-          <label for="nwindow">باز کردن پنجره</label>
-        </section>
-
-        <section>
-          <input type="radio" id="ntab" name="solution">
-          <label for="ntab">باز کردن برگه</label>
-        </section>
-      </fieldset>
+      <select id="lang-toggle" class="p-2">
+        <option value="fa">فارسی</option>
+        <option value="en">english</option>
+      </select>
     </section>
-  </header>
-  <main>
+
     <section>
       <h1>زال |‌ میان‌بر موتورهای جست‌وجو</h1>
-      <p>با زال یک بار جست و جو کنید و چندین بار نتایج را مشاهده کنید.</p>
     </section>
+
     <section>
-      <form onsubmit="event.preventDefault();" role="search" class="search-form">
+      <button type="button" class="btn">⚠️</button>
+    </section>
+  </header>
+  <main class="d-flex justify-content-center align-items-center flex-column p-5">
+
+    <section class="d-flex justify-content-center mb-5 mt-5">
+      <form onsubmit="event.preventdefault();" role="search" class="search-form">
         <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input" />
         <button type="submit" id="search-btn">برو</button>
       </form>
     </section>
-    <section class="section-lower">
-        <section>
-          <div>
-            <input type="checkbox" id="google">
-            <label for="google">گوگل</label>
-          </div>
-          <div>
-            <input type="checkbox" id="ddg">
-            <label for="ddg">داک‌داک‌گو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="bing">
-            <label for="bing">بینگ</label>
-          </div>
-          <div>
-            <input type="checkbox" id="wiki">
-            <label for="wiki">ویکی‌پدیا</label>
-          </div>
-          <div>
-            <input type="checkbox" id="yandex">
-            <label for="yandex">یَندِکس</label>
-          </div>
-          <div>
-            <input type="checkbox" id="yahoo">
-            <label for="yahoo">یاهو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="zbin">
-            <label for="zbin">ذره‌بین</label>
-          </div>
-        </section>
-        <section>
-          <div>
-            <input type="checkbox" id="brave">
-            <label for="brave">بِرِیو</label>
-          </div>
-          <div>
-            <input type="checkbox" id="ask">
-            <label for="ask">اَسک</label>
-          </div>
-          <div>
-            <input type="checkbox" id="webc">
-            <label for="webc">خزنده‌وب</label>
-          </div>
-        </section>
+
+    <section class="d-flex justify-content-center gap-3">
+      <div>
+        <input type="checkbox" id="google">
+        <label for="google">گوگل</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ddg">
+        <label for="ddg">داک‌داک‌گو</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bing">
+        <label for="bing">بینگ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="wiki">
+        <label for="wiki">ویکی‌پدیا</label>
+      </div>
+      <div>
+        <input type="checkbox" id="yandex">
+        <label for="yandex">یَندِکس</label>
+      </div>
+      <div>
+      <input type="checkbox" id="yahoo">
+      <label for="yahoo">یاهو</label>
+      </div>
+      <div>
+        <input type="checkbox" id="zbin">
+        <label for="zbin">ذره‌بین</label>
+      </div>
+      <div>
+        <input type="checkbox" id="brave">
+        <label for="brave">بِرِیو</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ask">
+        <label for="ask">اَسک</label>
+      </div>
+      <div>
+        <input type="checkbox" id="webc">
+        <label for="webc">وب‌کراولر</label>
+      </div>
     </section>
   </main>
-  <footer>
-    <span><a href="https://github.com/IndieHum" target="_blank">گیت‌هاب</a> سازنده</span>
+  <footer class="position-absolute bottom-0 start-50 translate-middle">
+      <span>با زدن ⭐ در <a href="https://github.com/IndieHum/zaal" target="_blank">گیت‌هاب</a> از ما حمایت کنید.</span>
   </footer>
-  <script src="./js/main.js" type="module"></script>
-  </body>
+</body>
+<!-- bootstrap js cdn -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-mrcw6zmfylzcla8nl+ntuvf0sa7msxsp1uyjomp4yleunsfap+jcxn/twtiaxvxm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-iqsolxl5pilfhosvnubq5lc7qb9dxgda9i+tq8zj3iwwawptgftxbj8nt4gn1r8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cvkiphgwic2al4u+lwgxfktricfu0jtxr+eqdz/bgldoeyl4h0zuf0qkbrj0ecqf" crossorigin="anonymous"></script>
 
 </html>
-
-<!--
-https://codepen.io/jkantner/pen/eYmvvqQ?editors=1100
-https://codepen.io/liamj/pen/vYYLGZj
--->
