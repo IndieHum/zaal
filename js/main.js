@@ -30,8 +30,9 @@ const searchFunc = () => {
   else Searching(SEchecked, SearchValue);
 }
 
-function mainFunc() {
+async function mainFunc() {
   console.log(event)
+  renderSE();
   LangToggle.addEventListener("change", PageChange);
   if (event.key === "Enter") searchFunc();
   SearchBtn.addEventListener("click", searchFunc);
