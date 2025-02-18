@@ -10,6 +10,7 @@ export function Searching(SEchecked, SearchValue) {
   const brave = "https://search.brave.com/search?q=";
   const ask = "https://www.ask.com/web?q=";
   const webc = "https://www.webcrawler.com/serp?q=";
+  const gerdoo = "https://gerdoo.me/search/?query=";
 
   const searchTemple = (SE) => window.open(`${SE}${SearchValue}`);
 
@@ -44,6 +45,9 @@ export function Searching(SEchecked, SearchValue) {
         break;
       case 'webc':
         searchTemple(webc);
+        break;
+      case 'gerdoo':
+        searchTemple(gerdoo);
         break;
     }
   });

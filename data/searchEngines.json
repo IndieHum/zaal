@@ -1,0 +1,57 @@
+[
+    {
+        "fa": "گوگل",
+        "en": "Google",
+        "id": "google"
+    },
+    {
+        "fa": "داک‌داک‌گو",
+        "en": "DuckDuckGo",
+        "id": "ddg"
+    },
+    {
+        "fa": "بینگ",
+        "en": "Bing",
+        "id": "bing"
+    },
+    {
+        "fa": "ویکی‌پدیا",
+        "en": "WikiPedia",
+        "id": "wiki"
+    },
+    {
+        "fa": "یَندِکس",
+        "en": "Yandex",
+        "id": "yandex"
+    },
+    {
+        "fa": "یاهو",
+        "en": "Yahoo",
+        "id": "yahoo"
+    },
+    {
+        "fa": "ذره‌بین",
+        "en": "ZareBin",
+        "id": "zbin"
+    },
+    {
+        "fa": "بِرِیو",
+        "en": "Brave",
+        "id": "brave"
+    },
+    {
+        "fa": "اَسک",
+        "en": "Ask",
+        "id": "ask"
+    },
+    {
+        "fa": "وب‌کراولر",
+        "en": "WebCrawler",
+        "id": "webc"
+    },
+    {
+        "fa": "گردو",
+        "en": "Gerdoo",
+        "id": "gerdoo"
+    }
+]

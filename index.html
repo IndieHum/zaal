@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="fa" dir="rtl">
 
   <head>
@@ -32,53 +32,13 @@
     <main class="d-flex justify-content-center align-items-center flex-column p-5">
 
       <section class="d-flex justify-content-center mb-5 mt-5">
-        <form onsubmit="event.preventdefault();" role="search" class="search-form">
+        <form onsubmit="event.preventDefault();" role="search" class="search-form">
           <input id="search" type="search" placeholder="بنویس..." autofocus required class="search-input" />
           <button type="submit" id="search-btn">برو</button>
         </form>
       </section>
 
-      <section class="d-flex justify-content-center gap-3">
-        <div>
-          <input type="checkbox" id="google">
-          <label for="google">گوگل</label>
-        </div>
-        <div>
-          <input type="checkbox" id="ddg">
-          <label for="ddg">داک‌داک‌گو</label>
-        </div>
-        <div>
-          <input type="checkbox" id="bing">
-          <label for="bing">بینگ</label>
-        </div>
-        <div>
-          <input type="checkbox" id="wiki">
-          <label for="wiki">ویکی‌پدیا</label>
-        </div>
-        <div>
-          <input type="checkbox" id="yandex">
-          <label for="yandex">یَندِکس</label>
-        </div>
-        <div>
-          <input type="checkbox" id="yahoo">
-          <label for="yahoo">یاهو</label>
-        </div>
-        <div>
-          <input type="checkbox" id="zbin">
-          <label for="zbin">ذره‌بین</label>
-        </div>
-        <div>
-          <input type="checkbox" id="brave">
-          <label for="brave">بِرِیو</label>
-        </div>
-        <div>
-          <input type="checkbox" id="ask">
-          <label for="ask">اَسک</label>
-        </div>
-        <div>
-          <input type="checkbox" id="webc">
-          <label for="webc">وب‌کراولر</label>
-        </div>
+      <section id="se-container" class="d-flex justify-content-center gap-3">
       </section>
     </main>
     <footer class="position-absolute bottom-0 start-50 translate-middle">
