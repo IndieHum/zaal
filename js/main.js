@@ -3,11 +3,30 @@ import { Searching } from "./search.js";
 import { renderSE } from "./renderSE.js";
 import { fetchJSON } from "./httpReq.js";
 
+// constant variables
 const SearchBtn = document.getElementById("search-btn");
 // const LangToggle = document.getElementById("lang-toggle");
 const SEContainer = document.getElementById("se-container");
+const selectionText = document.getElementById("selection-text");
+const selectionInput = document.getElementById("selection");
 
+// changable variables
 let SEchecked = [];
+
+// do you know better way?? then help me.
+selectionInput.checked = false;
+
+const selection = () => {
+  const inputs = SEContainer.querySelectorAll("input");
+
+  if (selectionInput.checked) {
+    selectionText.innerText = "پادگزینش همه";
+    inputs.forEach(e => e.checked = true);
+  } else {
+    selectionText.innerText = "گزینشه همه";
+    inputs.forEach(e => e.checked = false);
+  }
+}
 
 // pseudo modal for future
 const appAlert = () => {
@@ -45,3 +64,4 @@ async function mainFunc() {
 }
 
 document.addEventListener("DOMContentLoaded", mainFunc);
+selectionInput.addEventListener("input", selection);
