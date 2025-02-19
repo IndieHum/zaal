@@ -1,10 +1,10 @@
 import { Searching } from "./search.js";
-import { PageChange } from "./lang.js";
+// import { PageChange } from "./lang.js";
 import { renderSE } from "./renderSE.js";
 import { fetchJSON } from "./httpReq.js";
 
 const SearchBtn = document.getElementById("search-btn");
-const LangToggle = document.getElementById("lang-toggle");
+// const LangToggle = document.getElementById("lang-toggle");
 const SEContainer = document.getElementById("se-container");
 
 let SEchecked = [];
@@ -36,7 +36,7 @@ async function mainFunc() {
   }).catch(err => console.log(err))
 
   // checking for language change
-  LangToggle.addEventListener("change", PageChange);
+  // LangToggle.addEventListener("change", PageChange);
 
   // searching with enter
   if (event.key === "Enter") searchFunc();
