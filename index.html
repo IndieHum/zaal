@@ -26,7 +26,36 @@
     </section>
 
     <section>
-      <button type="button" class="btn">⚠️</button>
+      <!-- <button type="button" class="btn" id="warning-button">⚠️</button>
+
+      <dialog close id="warning-dialog" class="p-5 fixed top-50 left-50 border-none">
+        <h1>FEAR</h1>
+      </dialog> -->
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        ⚠️
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-info" id="exampleModalLabel">هشدار و کمی آموزش</h1>
+            </div>
+            <div class="modal-body text-dark">
+              <ul>
+                <li>حتما اطمینان حاصل فرمایید که به این وب‌سایت اجازه باز کردن چندین سربرگ داده‌اید.</li>
+                <li>انتخاب همه گزینه‌‌ها برای جست‌وجو ممکن است برای سخت‌افزارتان سنگین باشد.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </header>
   <main class="d-flex justify-content-center align-items-center flex-column p-5">

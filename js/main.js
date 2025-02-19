@@ -1,14 +1,14 @@
 import { Searching } from "./search.js";
-// import { PageChange } from "./lang.js";
 import { renderSE } from "./renderSE.js";
 import { fetchJSON } from "./httpReq.js";
 
 // constant variables
 const SearchBtn = document.getElementById("search-btn");
-// const LangToggle = document.getElementById("lang-toggle");
 const SEContainer = document.getElementById("se-container");
 const selectionText = document.getElementById("selection-text");
 const selectionInput = document.getElementById("selection");
+// const warnButton = document.getElementById("warning-button");
+// const warnDialog = document.getElementById("warning-dialog");
 
 // changable variables
 let SEchecked = [];
@@ -54,9 +54,6 @@ async function mainFunc() {
     renderSE(SEContainer, data);
   }).catch(err => console.log(err))
 
-  // checking for language change
-  // LangToggle.addEventListener("change", PageChange);
-
   // searching with enter
   if (event.key === "Enter") searchFunc();
   // searching with button
@@ -65,3 +62,4 @@ async function mainFunc() {
 
 document.addEventListener("DOMContentLoaded", mainFunc);
 selectionInput.addEventListener("input", selection);
+// warnButton.addEventListener("click", );
