@@ -12,14 +12,14 @@
 *,
 *::before,
 *::after {
-  font-family: 'vazir-medium', Arial, sans-serif;
+  font-family: 'vazir-medium', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-family: 'vazir-bold', Arial, sans-serif;
+  font-family: 'vazir-bold', sans-serif;
 }
 
 label {
@@ -30,7 +30,7 @@ a {
   text-decoration: none;
 }
 
-/* Searchbar */
+/* Searchbar Style */
 
 .search-form {
   position: relative;

@@ -1,5 +1,7 @@
+// TODO: founding BETTER way to doing this job
 export function Searching(SEchecked, SearchValue) {
 
+  // 1.each variable contain the way for searching with the search engine
   const google = "https://www.google.com/search?q=";
   const ddg = "https://duckduckgo.com/";
   const bing = "https://www.bing.com/search?q=";
@@ -12,8 +14,11 @@ export function Searching(SEchecked, SearchValue) {
   const webc = "https://www.webcrawler.com/serp?q=";
   const gerdoo = "https://gerdoo.me/search/?query=";
 
+  // 3.searching with protocol: {way for searching in SE} + {user searched value}
   const searchTemple = (SE) => window.open(`${SE}${SearchValue}`);
 
+  // 2.checking for each checked item to see wich engine are selected,
+  // then call for template to searching.
   SEchecked.forEach(n => {
     switch (n.id) {
       case 'google':

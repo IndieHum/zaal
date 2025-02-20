@@ -1,3 +1,4 @@
+// imported functions
 import { Searching } from "./search.js";
 import { renderSE } from "./renderSE.js";
 import { fetchJSON } from "./httpReq.js";
@@ -7,13 +8,11 @@ const SearchBtn = document.getElementById("search-btn");
 const SEContainer = document.getElementById("se-container");
 const selectionText = document.getElementById("selection-text");
 const selectionInput = document.getElementById("selection");
-// const warnButton = document.getElementById("warning-button");
-// const warnDialog = document.getElementById("warning-dialog");
 
 // changable variables
 let SEchecked = [];
 
-// do you know better way?? then help me.
+// TODO: do you know better way?? then help me.
 selectionInput.checked = false;
 
 const selection = () => {
@@ -62,4 +61,3 @@ async function mainFunc() {
 
 document.addEventListener("DOMContentLoaded", mainFunc);
 selectionInput.addEventListener("input", selection);
-// warnButton.addEventListener("click", );
