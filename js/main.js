@@ -8,6 +8,7 @@ const SearchBtn = document.getElementById("search-btn");
 const SEContainer = document.getElementById("se-container");
 const selectionText = document.getElementById("selection-text");
 const selectionInput = document.getElementById("selection");
+const alertSection = document.getElementById("alert");
 
 // changable variables
 let SEchecked = [];
@@ -27,10 +28,19 @@ const selection = () => {
   }
 }
 
-// pseudo modal for future
-const appAlert = () => {
-  if (window.location.href.includes("index.html")) alert("موتور جست‌وجویی انتخاب نشده است.");
-  else alert("non search engine has been choosed");
+// TODO: i really have no other idea for this!!
+// for naming class: type must be "danger" or "success",
+const appAlert = (message, type) => {
+  SearchBtn.disabled = true;
+
+  alertSection.innerText = message;
+  alertSection.classList.add(`alert-${type}`);
+  setTimeout(() => {
+    alertSection.innerText = "";
+    alertSection.classList.remove(`alert-${type}`);
+
+    SearchBtn.disabled = false;
+  }, 3000);
 }
 
 const searchFunc = () => {
@@ -41,9 +51,7 @@ const searchFunc = () => {
   SEnodes.forEach(n => {
     if (n.checked == true) SEchecked.push(n);
   });
-  console.log(SEchecked);
-  console.log(SEnodes);
-  if (SEchecked.length == 0) { appAlert(); return; }
+  if (SEchecked.length == 0) { appAlert("موتور جست‌وجویی انتخاب نشده است.", "danger"); return; }
   Searching(SEchecked, SearchValue);
 }
 
