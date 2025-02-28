@@ -19,7 +19,7 @@ const selection = () => {
   const inputs = SEContainer.querySelectorAll("input");
 
   if (selectionInput.checked) {
-    selectionText.innerText = "پادگزینش همه";
+    selectionText.innerText = "پاد گزینش همه";
     inputs.forEach(e => e.checked = true);
   } else {
     selectionText.innerText = "گزینشه همه";

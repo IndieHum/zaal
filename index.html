@@ -15,10 +15,17 @@
   <header class="d-flex justify-content-between align-items-center p-3 bg-secondary">
 
     <section>
-      <select id="lang-toggle" class="p-2">
-        <option value="fa">فارسی</option>
-        <option value="en" onclick="window.location.assign('./lang/en/index.html')">English</option>
-      </select>
+      <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        📜
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href=".">فارسی</a></li>
+        <li><a class="dropdown-item" href="./lang/en/index.html">English</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="https://github.com/IndieHum/zaal" target="_blank">Add Your Language</a></li>
+      </ul>
     </section>
 
     <section>
