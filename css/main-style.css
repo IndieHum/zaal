@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+.common-width {
+  width: 30rem;
+}
+
 /* Searchbar Style */
 
 .search-form {
