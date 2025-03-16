@@ -1,0 +1,37 @@
+[
+    {
+        "fa": "داگ‌پایل",
+        "en": "Dogpile",
+        "id": "dogpile"
+    },
+    {
+        "fa": "اگزایت",
+        "en": "Excite",
+        "id": "excite"
+    },
+    {
+        "fa": "اینفو",
+        "en": "Info",
+        "id": "info"
+    },
+    {
+        "fa": "متا کراولر",
+        "en": "Meta Crawler",
+        "id": "meta-crawler"
+    },
+    {
+        "fa": "سرکس",
+        "en": "SearX",
+        "id": "searx"
+    },
+    {
+        "fa": "استارت پیج",
+        "en": "StartPage",
+        "id": "startpage"
+    },
+    {
+        "fa": "کوآنت",
+        "en": "Qwant",
+        "id": "qwant"
+    }
+]

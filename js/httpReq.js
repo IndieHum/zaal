@@ -3,3 +3,9 @@ export const fetchJSON = async () => {
   const json = await res.json();
   return json;
 }
+
+export const fetchMetaJSON = async () => {
+  const res = await fetch("../data/metaSearchEngines.json");
+  const json = await res.json();
+  return json;
+}

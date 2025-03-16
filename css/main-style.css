@@ -63,7 +63,7 @@ input[type="search"] {
   font-size: 16px;
 }
 
-main button {
+main form > button {
   display: none;
   position: absolute;
   top: 0;

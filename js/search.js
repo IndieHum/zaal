@@ -1,5 +1,5 @@
 // TODO: founding BETTER way to doing this job
-export function Searching(SEchecked, SearchValue) {
+export function searching(SEchecked, SearchValue) {
 
   // 1.each variable contain the way for searching with the search engine
   const google = "https://www.google.com/search?q=";
