@@ -43,7 +43,7 @@ let SEchecked = [];
 
 // TODO: do you know better way?? then help me.
 selectionInput.checked = false;
-
+metaSelectionInput.checked = false;
 // TODO: adding selection for meta search engines
 const selection = () => {
   let inputs;
