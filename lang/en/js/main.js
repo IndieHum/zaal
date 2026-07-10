@@ -12,30 +12,33 @@ const selectionInput = document.getElementById("selection");
 const metaSelectionInput = document.getElementById("selectionSecond");
 const alertSection = document.getElementById("alert");
 const MSEContainer = document.getElementById("mse-container");
+const TSContainer = document.getElementById("ts-container");
 const MSETab = document.getElementById("MSE-tab");
 const SETab = document.getElementById("SE-tab");
 const TSTab = document.getElementById("TS-tab");
+const tsSelectionInput = document.getElementById("ts-selection");
+const tsSelectionText = document.getElementById("ts-selection-text");
 
-// متغیرهای مربوط به مدیریت تب‌ها
-let activeTab = "SE"; // تب فعال فعلی (پیش‌فرض: موتور جستجو)
+// variables for managing tabs
+let activeTab = "SE"; // current active tab (default: search engines)
 
-// اضافه کردن شنونده رویداد برای تب‌ها
-MSETab.addEventListener("click", (event) => {
+// add event listeners for tabs
+MSETab.addEventListener("click", () => {
   setActiveTab("MSE");
 });
 
-TSTab.addEventListener("click", (event) => {
+TSTab.addEventListener("click", () => {
   setActiveTab("TS");
 });
 
-SETab && SETab.addEventListener("click", (event) => {
+SETab.addEventListener("click", () => {
   setActiveTab("SE");
 });
 
-// تابع برای تنظیم تب فعال
+// function to set active tab
 function setActiveTab(tabName) {
   activeTab = tabName;
-  console.log(`تب فعال: ${activeTab}`);
+  console.log(`Active tab: ${activeTab}`);
 }
 
 // changable variables
@@ -43,6 +46,24 @@ let SEchecked = [];
 
 // TODO: do you know better way?? then help me.
 selectionInput.checked = false;
+metaSelectionInput.checked = false;
+tsSelectionInput.checked = false;
+
+const telegramSearchSources = [
+  { id: "telegram-web", fa: "Search the web with domain t.me", url: "https://www.google.com/search?q=site:t.me%20" },
+  { id: "telegram-web-2", fa: "Search the web with domain telegram.me", url: "https://www.google.com/search?q=site:telegram.me%20" },
+  { id: "telegram-web-3", fa: "Search the web with domain telegram.org", url: "https://www.google.com/search?q=site:telegram.org%20" }
+];
+
+const renderTS = () => {
+  if (!TSContainer) return;
+  TSContainer.innerHTML = telegramSearchSources.map(item => `
+    <div>
+      <input type="checkbox" id="${item.id}">
+      <label for="${item.id}">${item.fa}</label>
+    </div>
+  `).join("");
+};
 
 // TODO: adding selection for meta search engines
 const selection = () => {
@@ -52,7 +73,7 @@ const selection = () => {
     case "SE":
       inputs = SEContainer.querySelectorAll("input");
       if (selectionInput.checked) {
-        selectionText.innerText = "DeSelect All";
+        selectionText.innerText = "Deselect All";
         inputs.forEach(e => e.checked = true);
       } else {
         selectionText.innerText = "Select All";
@@ -62,7 +83,7 @@ const selection = () => {
     case "MSE":
       inputs = MSEContainer.querySelectorAll("input");
       if (metaSelectionInput.checked) {
-        selectionText.innerText = "DeSelect All";
+        selectionText.innerText = "Deselect All";
         inputs.forEach(e => e.checked = true);
       } else {
         selectionText.innerText = "Select All";
@@ -70,7 +91,14 @@ const selection = () => {
       }
       break;
     case "TS":
-      // inputs = TSContainer.querySelectorAll("input");
+      inputs = TSContainer.querySelectorAll("input");
+      if (tsSelectionInput.checked) {
+        tsSelectionText.innerText = "Deselect All";
+        inputs.forEach(e => e.checked = true);
+      } else {
+        tsSelectionText.innerText = "Select All";
+        inputs.forEach(e => e.checked = false);
+      }
       break;
   }
 }
@@ -112,17 +140,24 @@ const searchFunc = () => {
       metaSearching(SEchecked, SearchValue);
       break;
     case "TS":
-      // const TSnodes = document.querySelectorAll("input[type='checkbox']");
-      // TSnodes.forEach(n => {
-      //   if (n.checked == true) SEchecked.push(n);
-      // });
-      // if (SEchecked.length == 0) { appAlert("موتور تلگرامی انتخاب نشده است.", "danger"); return; }
-      // searching(SEchecked, SearchValue);
+      const TSnodes = TSContainer.querySelectorAll("input[type='checkbox']");
+      TSnodes.forEach(n => {
+        if (n.checked == true) SEchecked.push(n);
+      });
+      if (SEchecked.length == 0) { appAlert("No Telegram search option selected.", "danger"); return; }
+      SEchecked.forEach(n => {
+        const source = telegramSearchSources.find(item => item.id === n.id);
+        if (source) {
+          window.open(`${source.url}${encodeURIComponent(SearchValue)}`);
+        }
+      });
       break;
   }
 }
 
 async function mainFunc() {
+  renderTS();
+
   // fetching serach engines
   fetchJSON().then(data => {
     renderSE(SEContainer, data);
@@ -133,8 +168,6 @@ async function mainFunc() {
     renderSE(MSEContainer, data);
   }).catch(err => console.log(err))
 
-  // searching with enter
-  if (event.key === "Enter") searchFunc();
   // searching with button
   SearchBtn.addEventListener("click", searchFunc);
 }
@@ -142,3 +175,4 @@ async function mainFunc() {
 document.addEventListener("DOMContentLoaded", mainFunc);
 selectionInput.addEventListener("input", selection);
 metaSelectionInput.addEventListener("input", selection);
+tsSelectionInput.addEventListener("input", selection);
